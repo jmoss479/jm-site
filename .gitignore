@@ -1,0 +1,35 @@
+# WordPress core
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+xmlrpc.php
+
+# Uploads & cache
+wp-content/uploads/
+wp-content/cache/
+# WordPress core
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+xmlrpc.php
+
+# Uploads & cache
+wp-content/uploads/
+wp-content/cache/
+wp-content/et-cache/
+wp-content/litespeed/
+
+# Plugins we don't control
+wp-content/plugins/*
+!wp-content/plugins/jm-custom/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs
+*.log
