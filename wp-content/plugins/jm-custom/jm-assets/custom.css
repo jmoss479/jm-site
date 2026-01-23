@@ -1,4 +1,159 @@
-/* JM Custom CSS (front-end)
-   Keep theme clean: put site-wide CSS here.
-*/
+/* ==================================================
+   JM CUSTOM CSS
+   Site layer (plugin)
+   ================================================== */
 
+/* --------------------------------------------------
+   Self-hosted fonts (plugin layer)
+-------------------------------------------------- */
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/inter-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/inter-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/inter-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./fonts/outfit-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./fonts/outfit-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* --------------------------------------------------
+   1) DESIGN TOKENS (variables)
+-------------------------------------------------- */
+:root {
+  /* color tokens (add later) */
+  /* --jm-text: #111; */
+  /* --jm-bg: #fff; */
+}
+
+/* --------------------------------------------------
+   2) TYPOGRAPHY
+-------------------------------------------------- */
+
+/* 1) Type tokens */
+:root {
+  /* Font stacks */
+  --jm-font-body: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --jm-font-heading: Outfit, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Base sizing */
+  --jm-text-base: 16px;
+  --jm-line-base: 1.6;
+
+  /* Rhythm */
+  --jm-heading-line: 1.15;
+  --jm-paragraph-space: 1em;
+
+  /* Weights */
+  --jm-body-weight: 400;
+  --jm-heading-weight: 700;
+
+  /* Letter spacing */
+  --jm-heading-tracking: -0.015em; /* subtle optical tightening */
+}
+
+/* 2) Global base */
+html { font-size: var(--jm-text-base); }
+
+body {
+  font-family: var(--jm-font-body);
+  font-weight: var(--jm-body-weight);
+  line-height: var(--jm-line-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Divi sometimes overrides body font inside modules */
+p {
+  font-family: var(--jm-font-body);
+}
+
+
+/* 3) Headings */
+h1, h2, h3, h4, h5, h6,
+.et_pb_module_header,
+.et_pb_text h1, .et_pb_text h2, .et_pb_text h3,
+.et_pb_text h4, .et_pb_text h5, .et_pb_text h6 {
+  font-family: var(--jm-font-heading);
+  font-weight: var(--jm-heading-weight);
+  line-height: var(--jm-heading-line);
+  letter-spacing: var(--jm-heading-tracking);
+}
+
+/* 4) Paragraph rhythm */
+p { margin: 0 0 var(--jm-paragraph-space); }
+p:last-child { margin-bottom: 0; }
+
+/* 5) Links (inherit typography cleanly) */
+a { text-underline-offset: 0.12em; }
+a:hover { text-decoration-thickness: 0.12em; }
+
+/* 6) Forms */
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* 7) Optional: slightly better long-form readability */
+.et_pb_text,
+.entry-content {
+  font-size: 1rem;
+}
+
+/* 8) Divi “button text” inherits heading/body correctly */
+.et_pb_button,
+.et_pb_button:after {
+  font-family: var(--jm-font-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+
+
+/* --------------------------------------------------
+   3) LAYOUT
+-------------------------------------------------- */
+
+/* --------------------------------------------------
+   4) COMPONENTS
+-------------------------------------------------- */
+
+/* --------------------------------------------------
+   5) UTILITIES
+-------------------------------------------------- */
+
+/* --------------------------------------------------
+   6) PAGE / TEMPLATE OVERRIDES (last resort)
+-------------------------------------------------- */
