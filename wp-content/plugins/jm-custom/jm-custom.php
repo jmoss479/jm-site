@@ -3,7 +3,7 @@
  * Plugin Name: JM Customizations
  * Description: Site-specific customizations.
  * Author: Justin Moss
- * Version: 1.0.0
+ * Version: 1.0.1
  */
 
 if (!defined('ABSPATH')) { exit; }

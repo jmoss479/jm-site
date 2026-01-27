@@ -1,0 +1,134 @@
+=================================================
+JUSTINMOSS.NET — BRAND GUIDELINES (QUICK REF)
+=================================================
+
+Last updated: 2026-01-27
+
+This is a practical reference file.
+If it's not here, it’s not locked yet.
+
+
+-------------------------------------------------
+BRAND / SITE
+-------------------------------------------------
+
+Primary site: justinmoss.net
+Structure: Single site with multiple “collections”
+Tone: Personal, reflective, exploratory (not polished-corporate)
+
+Collections may override accent colors, but share core typography
+and base neutrals unless explicitly changed.
+
+
+-------------------------------------------------
+TYPOGRAPHY
+-------------------------------------------------
+
+Headings:
+- Font: Outfit
+- Weight: Bold
+- Usage: H1–H6, section titles, emphasis text
+
+Body:
+- Font: Inter
+- Weight: Regular (400)
+- Usage: Paragraphs, lists, UI text, captions
+
+Notes:
+- Keep typography simple and consistent
+- No decorative fonts
+- Let color + spacing do the work
+
+
+-------------------------------------------------
+CORE NEUTRAL COLORS (SITEWIDE)
+-------------------------------------------------
+
+Headings / Dark Elements:
+- #1C1C1E  (Deep charcoal black)
+
+Body Text / Secondary Dark:
+- #3A3A3C  (Soft dark gray)
+
+These neutrals are shared across all collections
+unless explicitly overridden.
+
+
+-------------------------------------------------
+COLLECTION COLOR SYSTEM
+-------------------------------------------------
+
+Each collection uses 3 accent colors.
+Accents are layered on top of the core neutrals.
+
+
+DEFAULT (Base / Fallback)
+---------------------------------
+Accent 1: #E8EFFF
+Accent 2: #6B8CFF
+Accent 3: #1F3FBF
+
+
+ADHDMAZING
+---------------------------------
+Accent 1 (lightest):  #AEE9F5
+Accent 2 (medium):    #4FB2C7
+Accent 3 (darkest):   #176072
+
+Notes:
+- adhdmazing is always lowercase
+- Calm, supportive, non-alarming tone
+
+
+ITMIGHTBEME
+---------------------------------
+Accent 1: #FFE2D3
+Accent 2: #C46A2F
+Accent 3: #7A3C14
+
+
+EPIPHILY (Faith / Reflection)
+---------------------------------
+Accent 1: #F3ECD7
+Accent 2: #B89B4F
+Accent 3: #6B5621
+
+
+CENTERLINE
+---------------------------------
+Accent 1: #DDE9FF
+Accent 2: #3F74D8
+Accent 3: #1C3C7F
+
+
+-------------------------------------------------
+USAGE NOTES
+-------------------------------------------------
+
+- Neutrals stay consistent sitewide
+- Accents are used for:
+  - Links
+  - Buttons
+  - Dividers
+  - Emphasis elements
+- Avoid overusing Accent 3 (darkest)
+- White space is intentional
+
+
+-------------------------------------------------
+NOT YET DEFINED (INTENTIONALLY BLANK)
+-------------------------------------------------
+
+- Logo rules
+- Iconography system
+- Button sizing standards
+- Voice / copy rules
+- Image treatment rules
+- Motion / animation rules
+
+(These will be added only when actually decided)
+
+
+-------------------------------------------------
+END
+-------------------------------------------------

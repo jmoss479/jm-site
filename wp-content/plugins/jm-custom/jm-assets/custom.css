@@ -52,10 +52,27 @@
    1) DESIGN TOKENS (variables)
 -------------------------------------------------- */
 :root {
-  /* color tokens (add later) */
-  /* --jm-text: #111; */
-  /* --jm-bg: #fff; */
+  /* Base text */
+  --jm-text-heading: var(--dlov_dark_color1);
+  --jm-text-body: var(--dlov_dark_color2);
+
+  /* Default accents (site default / “home” collection) */
+  --jm-accent-1: var(--dlov_accent_color1);
+  --jm-accent-2: var(--dlov_accent_color2);
+  --jm-accent-3: var(--dlov_accent_color3);
+
+  /* Optional semantic helpers */
+  --jm-link: var(--jm-accent-2);
+  --jm-link-hover: var(--jm-accent-3);
+  --jm-focus: color-mix(in srgb, var(--jm-accent-2) 35%, transparent);
 }
+
+body { color: var(--jm-text-body); }
+h1, h2, h3, h4, h5, h6 { color: var(--jm-text-heading); }
+
+a { color: var(--jm-link); }
+a:hover { color: var(--jm-link-hover); }
+
 
 /* --------------------------------------------------
    2) TYPOGRAPHY
