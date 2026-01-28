@@ -24,7 +24,7 @@ add_action('wp_enqueue_scripts', function () {
     'jm-canvas',
     plugins_url('jm-assets/canvas.css', __DIR__ . '/../jm-custom.php'),
     [],
-    '1.0.0'
+    '1.0.1'
   );
 
   // Main site JS

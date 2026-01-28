@@ -338,6 +338,13 @@ Canvas Hero Sections
 }
 
 /* Canvas Hero #5 */
+.canvas-hero-5 .et_pb_row.et-last-child{
+  max-width: 980px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .canvas-hero-5 .et_pb_row.et-last-child .et_pb_column {
   display: flex;
   justify-content: center;
