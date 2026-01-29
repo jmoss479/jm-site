@@ -167,6 +167,23 @@ input, textarea, select, button {
    4) COMPONENTS
 -------------------------------------------------- */
 
+/* Popup close icon hover interaction */
+.milly-default-close[class*="dlov_icon"] {
+  transition: transform 0.35s ease;
+  transform-origin: center;
+}
+
+.milly-default-close[class*="dlov_icon"]:hover {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .milly-default-close[class*="dlov_icon"] {
+    transition: none;
+  }
+}
+
+
 /* --------------------------------------------------
    5) UTILITIES
 -------------------------------------------------- */
