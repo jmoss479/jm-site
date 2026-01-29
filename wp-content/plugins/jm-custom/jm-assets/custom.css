@@ -188,6 +188,12 @@ input, textarea, select, button {
    5) UTILITIES
 -------------------------------------------------- */
 
+/* Remove paragraph bottom margin */
+.mb-0 p {
+  margin-bottom: 0;
+}
+
+
 /* --------------------------------------------------
    6) PAGE / TEMPLATE OVERRIDES (last resort)
 -------------------------------------------------- */
