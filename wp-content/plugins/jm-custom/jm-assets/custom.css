@@ -129,6 +129,20 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: var(--jm-heading-tracking);
 }
 
+/* Headings: force correct heading font */
+#page-container h4,
+#page-container h5,
+h4.et_pb_module_header,
+h5.et_pb_module_header {
+  font-family: "Outfit", sans-serif !important;
+}
+
+.et_pb_blurb .et_pb_module_header,
+.et_pb_blurb .et_pb_module_header span {
+  font-family: "Outfit", sans-serif !important;
+}
+
+
 /* 4) Paragraph rhythm */
 p { margin: 0 0 var(--jm-paragraph-space); }
 p:last-child { margin-bottom: 0; }
@@ -156,7 +170,6 @@ input, textarea, select, button {
   font-weight: 600;
   letter-spacing: -0.01em;
 }
-
 
 
 /* --------------------------------------------------
@@ -192,6 +205,7 @@ input, textarea, select, button {
 .mb-0 p {
   margin-bottom: 0;
 }
+
 
 
 /* --------------------------------------------------
