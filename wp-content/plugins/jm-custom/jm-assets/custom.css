@@ -211,6 +211,7 @@ input, textarea, select, button {
 .font-heading * {
   font-family: "Outfit", sans-serif !important;
   font-weight: bold;
+  color: var(--dlov_dark_color1) !important;
 }
 
 
