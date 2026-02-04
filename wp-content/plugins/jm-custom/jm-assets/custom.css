@@ -206,6 +206,12 @@ input, textarea, select, button {
   margin-bottom: 0;
 }
 
+/* Utility: force heading font */
+.font-heading,
+.font-heading * {
+  font-family: "Outfit", sans-serif !important;
+  font-weight: bold;
+}
 
 
 /* --------------------------------------------------
