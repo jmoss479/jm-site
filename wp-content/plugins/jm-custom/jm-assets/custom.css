@@ -4,55 +4,10 @@
    ================================================== */
 
 /* --------------------------------------------------
-   Self-hosted fonts (plugin layer)
--------------------------------------------------- */
-
-@font-face {
-  font-family: "Inter";
-  src: url("./fonts/inter-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("./fonts/inter-400-italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("./fonts/inter-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Outfit";
-  src: url("./fonts/outfit-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Outfit";
-  src: url("./fonts/outfit-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-/* --------------------------------------------------
    1) DESIGN TOKENS (variables)
 -------------------------------------------------- */
 :root {
-  /* Base text */
+  /* Base text (from Milly / Divi) */
   --jm-text-heading: var(--dlov_dark_color1);
   --jm-text-body: var(--dlov_dark_color2);
 
@@ -61,120 +16,81 @@
   --jm-accent-2: var(--dlov_accent_color2);
   --jm-accent-3: var(--dlov_accent_color3);
 
-  /* Optional semantic helpers */
+  /* Semantic helpers */
   --jm-link: var(--jm-accent-2);
   --jm-link-hover: var(--jm-accent-3);
   --jm-focus: color-mix(in srgb, var(--jm-accent-2) 35%, transparent);
-}
 
-body { color: var(--jm-text-body); }
-h1, h2, h3, h4, h5, h6 { color: var(--jm-text-heading); }
-
-a { color: var(--jm-link); }
-a:hover { color: var(--jm-link-hover); }
-
-
-/* --------------------------------------------------
-   2) TYPOGRAPHY
--------------------------------------------------- */
-
-/* 1) Type tokens */
-:root {
-  /* Font stacks */
-  --jm-font-body: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --jm-font-heading: Outfit, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-
-  /* Base sizing */
+  /* Typography behavior (not font ownership) */
   --jm-text-base: 16px;
   --jm-line-base: 1.6;
-
-  /* Rhythm */
   --jm-heading-line: 1.15;
+  --jm-heading-tracking: -0.015em;
   --jm-paragraph-space: 1em;
-
-  /* Weights */
-  --jm-body-weight: 400;
-  --jm-heading-weight: 700;
-
-  /* Letter spacing */
-  --jm-heading-tracking: -0.015em; /* subtle optical tightening */
 }
 
-/* 2) Global base */
-html { font-size: var(--jm-text-base); }
-
+/* --------------------------------------------------
+   2) GLOBAL COLOR APPLICATION
+-------------------------------------------------- */
 body {
-  font-family: var(--jm-font-body);
-  font-weight: var(--jm-body-weight);
+  color: var(--jm-text-body);
   line-height: var(--jm-line-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Divi sometimes overrides body font inside modules */
-p {
-  font-family: var(--jm-font-body);
-}
-
-
-/* 3) Headings */
-h1, h2, h3, h4, h5, h6,
-.et_pb_module_header,
-.et_pb_text h1, .et_pb_text h2, .et_pb_text h3,
-.et_pb_text h4, .et_pb_text h5, .et_pb_text h6 {
-  font-family: var(--jm-font-heading);
-  font-weight: var(--jm-heading-weight);
+h1, h2, h3, h4, h5, h6 {
+  color: var(--jm-text-heading);
   line-height: var(--jm-heading-line);
   letter-spacing: var(--jm-heading-tracking);
 }
 
-/* Headings: force correct heading font */
-#page-container h4,
-#page-container h5,
-h4.et_pb_module_header,
-h5.et_pb_module_header {
-  font-family: "Outfit", sans-serif !important;
+/* Links */
+a {
+  color: var(--jm-link);
+  text-underline-offset: 0.12em;
 }
 
-.et_pb_blurb .et_pb_module_header,
-.et_pb_blurb .et_pb_module_header span {
-  font-family: "Outfit", sans-serif !important;
+a:hover {
+  color: var(--jm-link-hover);
+  text-decoration-thickness: 0.12em;
 }
 
+/* --------------------------------------------------
+   3) TYPOGRAPHY RHYTHM
+-------------------------------------------------- */
 
-/* 4) Paragraph rhythm */
-p { margin: 0 0 var(--jm-paragraph-space); }
-p:last-child { margin-bottom: 0; }
+/* Paragraph spacing */
+p {
+  margin: 0 0 var(--jm-paragraph-space);
+}
 
-/* 5) Links (inherit typography cleanly) */
-a { text-underline-offset: 0.12em; }
-a:hover { text-decoration-thickness: 0.12em; }
+p:last-child {
+  margin-bottom: 0;
+}
 
-/* 6) Forms */
-input, textarea, select, button {
+/* Forms inherit Divi fonts cleanly */
+input,
+textarea,
+select,
+button {
   font-family: inherit;
   font-size: inherit;
 }
 
-/* 7) Optional: slightly better long-form readability */
+/* Optional long-form consistency */
 .et_pb_text,
 .entry-content {
   font-size: 1rem;
 }
 
-/* 8) Divi “button text” inherits heading/body correctly */
+/* Buttons: typography behavior only (font comes from Divi) */
 .et_pb_button,
 .et_pb_button:after {
-  font-family: var(--jm-font-heading);
   font-weight: 600;
   letter-spacing: -0.01em;
 }
-
-
-/* --------------------------------------------------
-   3) LAYOUT
--------------------------------------------------- */
 
 /* --------------------------------------------------
    4) COMPONENTS
@@ -196,7 +112,6 @@ input, textarea, select, button {
   }
 }
 
-
 /* --------------------------------------------------
    5) UTILITIES
 -------------------------------------------------- */
@@ -205,15 +120,6 @@ input, textarea, select, button {
 .mb-0 p {
   margin-bottom: 0;
 }
-
-/* Utility: force heading font */
-.font-heading,
-.font-heading * {
-  font-family: "Outfit", sans-serif !important;
-  font-weight: bold;
-  color: var(--dlov_dark_color1) !important;
-}
-
 
 /* --------------------------------------------------
    6) PAGE / TEMPLATE OVERRIDES (last resort)
