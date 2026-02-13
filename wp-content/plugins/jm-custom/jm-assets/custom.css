@@ -151,6 +151,12 @@ button {
   margin-bottom: 0;
 }
 
+/* tight paragraph bottom margin */
+.mb-tight p {
+  margin-bottom: 0.75em;
+}
+
+
 
 /* --------------------------------------------------
    6) PAGE / TEMPLATE OVERRIDES (last resort)
